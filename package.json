@@ -1,0 +1,23 @@
+{
+  "name": "es-search-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^4.1.1",
+    "react-scripts": "0.8.4"
+  },
+  "dependencies": {
+    "antd": "^2.5.3",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "scripts": {
+    "start": "npm run watch-css & react-scripts start",
+    "prod": "npm run build && NODE_ENV=production pushstate-server build",
+    "build": "npm run build-css && react-scripts build",
+    "build-css": "node-sass --output-style expanded src/sass/base.scss src/styles/index.css",
+    "watch-css": "npm run build-css && node-sass src/sass/base.scss src/styles/index.css -w",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
